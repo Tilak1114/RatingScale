@@ -6,6 +6,7 @@ A customizable rating scale supporting a 1-10 scale.
 [![](https://jitpack.io/v/Tilak1114/RatingScale.svg)](https://jitpack.io/#Tilak1114/RatingScale)
 
 ![screenshot](img/ss1.png)
+<br />
 ![screenshot](img/ss2.png)
 
 ## Usage
