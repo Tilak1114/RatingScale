@@ -41,6 +41,6 @@ A customizable rating scale supporting a 1-10 scale.
     //...
     dependencies {
         //...
-        implementation 'com.github.Tilak1114:RatingScale:{latest-version}'
+        implementation 'com.github.Tilak1114:RatingScale:v{latest-version}'
     }
 ```
