@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="48dp">
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/item1"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginHorizontal="1dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/item2"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/one_unsel" />
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/item2"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginHorizontal="1dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/item3"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintStart_toEndOf="@id/item1"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/two_unsel" />
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/item3"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginHorizontal="1dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/item4"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintStart_toEndOf="@id/item2"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/three_unsel" />
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/item4"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginHorizontal="1dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/item5"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintStart_toEndOf="@id/item3"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/four_unsel" />
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/item5"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginHorizontal="1dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/item6"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintStart_toEndOf="@id/item4"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/five_unsel" />
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/item6"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginHorizontal="1dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/item7"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintStart_toEndOf="@id/item5"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/six_unsel" />
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/item7"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginHorizontal="1dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/item8"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintStart_toEndOf="@id/item6"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/seven_unsel" />
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/item8"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginHorizontal="1dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/item9"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintStart_toEndOf="@id/item7"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/eight_unsel" />
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/item9"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginHorizontal="1dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/item10"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintStart_toEndOf="@id/item8"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/nine_unsel" />
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/item10"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginHorizontal="1dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintStart_toEndOf="@id/item9"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/ten_unsel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

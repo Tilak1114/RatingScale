@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <declare-styleable name="RatingScale">
+    <attr name="enabled" format="boolean" />
+    <attr name="rating" format="integer" />
+    <attr name="unSelectedRatingItem1" format="reference" />
+    <attr name="unSelectedRatingItem2" format="reference" />
+    <attr name="unSelectedRatingItem3" format="reference" />
+    <attr name="unSelectedRatingItem4" format="reference" />
+    <attr name="unSelectedRatingItem5" format="reference" />
+    <attr name="unSelectedRatingItem6" format="reference" />
+    <attr name="unSelectedRatingItem7" format="reference" />
+    <attr name="unSelectedRatingItem8" format="reference" />
+    <attr name="unSelectedRatingItem9" format="reference" />
+    <attr name="unSelectedRatingItem10" format="reference" />
+    <attr name="selectedRatingItem1" format="reference" />
+    <attr name="selectedRatingItem2" format="reference" />
+    <attr name="selectedRatingItem3" format="reference" />
+    <attr name="selectedRatingItem4" format="reference" />
+    <attr name="selectedRatingItem5" format="reference" />
+    <attr name="selectedRatingItem6" format="reference" />
+    <attr name="selectedRatingItem7" format="reference" />
+    <attr name="selectedRatingItem8" format="reference" />
+    <attr name="selectedRatingItem9" format="reference" />
+    <attr name="selectedRatingItem10" format="reference" />
+  </declare-styleable>
+</resources>
