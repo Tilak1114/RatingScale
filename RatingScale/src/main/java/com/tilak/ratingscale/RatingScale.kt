@@ -1,14 +1,18 @@
 package com.tilak.ratingscale
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.res.TypedArray
 import android.util.AttributeSet
+import android.view.MotionEvent
+import android.view.View
 import androidx.annotation.DrawableRes
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.tilak.ratingscale.models.RatingItem
 
-class RatingScale : ConstraintLayout {
+
+class RatingScale : ConstraintLayout, View.OnClickListener {
 
     private lateinit var ratingItems: Array<RatingItem>
     private var currentRating = -1
@@ -82,6 +86,8 @@ class RatingScale : ConstraintLayout {
 
     @DrawableRes
     private var unSelectedItem10: Int = -1
+
+    var onRatingInteraction: ((rating: Int) -> Unit)? = null
 
     lateinit var attributes: TypedArray
 
@@ -204,6 +210,7 @@ class RatingScale : ConstraintLayout {
         item10 = findViewById(R.id.item10)
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     override fun onFinishInflate() {
         super.onFinishInflate()
 
@@ -220,55 +227,16 @@ class RatingScale : ConstraintLayout {
             RatingItem(R.id.item10, unSelectedItem10, selectedItem10)
         )
 
-        item1.setOnClickListener {
-            currentRating = 1
-            updateDrawablesOnSelection()
-        }
-
-        item2.setOnClickListener {
-            currentRating = 2
-            updateDrawablesOnSelection()
-        }
-
-        item3.setOnClickListener {
-            currentRating = 3
-            updateDrawablesOnSelection()
-        }
-
-        item4.setOnClickListener {
-            currentRating = 4
-            updateDrawablesOnSelection()
-        }
-
-        item5.setOnClickListener {
-            currentRating = 5
-            updateDrawablesOnSelection()
-        }
-
-        item6.setOnClickListener {
-            currentRating = 6
-            updateDrawablesOnSelection()
-        }
-
-        item7.setOnClickListener {
-            currentRating = 7
-            updateDrawablesOnSelection()
-        }
-
-        item8.setOnClickListener {
-            currentRating = 8
-            updateDrawablesOnSelection()
-        }
-
-        item9.setOnClickListener {
-            currentRating = 9
-            updateDrawablesOnSelection()
-        }
-
-        item10.setOnClickListener {
-            currentRating = 10
-            updateDrawablesOnSelection()
-        }
+        item1.setOnClickListener(this)
+        item2.setOnClickListener(this)
+        item3.setOnClickListener(this)
+        item4.setOnClickListener(this)
+        item5.setOnClickListener(this)
+        item6.setOnClickListener(this)
+        item7.setOnClickListener(this)
+        item8.setOnClickListener(this)
+        item9.setOnClickListener(this)
+        item10.setOnClickListener(this)
 
         item1.setImageResource(unSelectedItem1)
         item2.setImageResource(unSelectedItem2)
@@ -296,6 +264,10 @@ class RatingScale : ConstraintLayout {
         return currentRating
     }
 
+    fun setOnRatingListener(onRatingInteraction: (rating: Int) -> Unit) {
+        this.onRatingInteraction = onRatingInteraction
+    }
+
     private fun updateDrawablesOnSelection() {
         if (currentRating <= 0) {
             return
@@ -311,5 +283,22 @@ class RatingScale : ConstraintLayout {
                 findViewById<AppCompatImageView>(id).setImageResource(unselectedDrawable)
             }
         }
+    }
+
+    override fun onClick(view: View?) {
+        when(view?.id){
+            item1.id -> currentRating = 1
+            item2.id -> currentRating = 2
+            item3.id -> currentRating = 3
+            item4.id -> currentRating = 4
+            item5.id -> currentRating = 5
+            item6.id -> currentRating = 6
+            item7.id -> currentRating = 7
+            item8.id -> currentRating = 8
+            item9.id -> currentRating = 9
+            item10.id -> currentRating = 10
+        }
+        updateDrawablesOnSelection()
+        onRatingInteraction?.invoke(currentRating)
     }
 }
